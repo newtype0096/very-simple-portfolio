@@ -7,12 +7,16 @@ export interface InformationProps {
 
 export interface WorkExperienceProps {
   id: number;
-  name: string;
-  description?: string;
+  name: string;  
   position: string;
   period: string[];
   markdown?: string;
   imgSrc?: string;
+  team?: string;
+  description?: string;
+  team_2?: string;
+  description_2?: string;
+  markdown_2?: string;
 }
 
 export interface ProjectProps {
