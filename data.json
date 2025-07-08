@@ -37,23 +37,38 @@
   "project": [
     {
       "id": 0,
-      "name": "첫번째 팀 프로젝트",
-      "description": "프로젝트에 대한 간단한 설명을 적을 수 있습니다. 어떤 프로젝트인지 주제나 강조하고 싶은 부분을 적어보세요.",
-      "webUrl": "https://github.com/sjoleee/",
-      "repoUrl": "https://github.com/sjoleee/",
+      "name": "영상관제 소프트웨어",
+      "description": "NVR과 연동하여 실시간 영상 모니터링 및 저장 영상 검색/재생, 카메라 제어 등을 제공하는 소프트웨어.",
       "isTeam": true,
-      "period": ["2022. 07", "2022. 09"],
-      "stack": ["사용한 기술을 적어주세요", "React.js", "JavaScript", "styled-components", "Recoil"]
+      "stack": ["C++", "MFC", "PostgreSQL"]
     },
     {
       "id": 1,
-      "name": "첫번째 개인 프로젝트",
-      "description": "프로젝트에 대한 간단한 설명을 적을 수 있습니다. 어떤 프로젝트인지 주제나 강조하고 싶은 부분을 적어보세요.",
-      "webUrl": "https://github.com/sjoleee/",
-      "repoUrl": "https://github.com/sjoleee/",
-      "isTeam": false,
-      "period": ["2022. 10", "2022. 11"],
-      "stack": ["JavaScript", "HTML/CSS"]
+      "name": "개인영상정보보호 소프트웨어",
+      "description": "영상 파일을 입력으로 객체를 탐지하여 자동 마스킹(블러, 모자이크) 하거나 정적 객체에 수동 마스킹 처리 등을 제공하는 소프트웨어.",
+      "isTeam": true,
+      "stack": ["C++", "MFC", "BCGControlBar", "OpenCV"]
+    },
+    {
+      "id": 2,
+      "name": "영상저장분배 서버",
+      "description": "IP카메라, 비디오 서버와 연동하여 실시간/저장 영상을 클라이언트에게 제공하는 소프트웨어.",
+      "isTeam": true,
+      "stack": ["C++", "ONVIF", "RTSP", "Windows", "Linux"]
+    },
+    {
+      "id": 3,
+      "name": "공공기관용 NVR 보안 성능품질 TTA Verified 인증",
+      "description": "공공기관에서 시스템을 도입할 때 의무적으로 적용되며, TTA에서 제정한 인증 기준에 따라 심사를 통과한 제품에만 부여.",
+      "isTeam": true,
+      "stack": ["C++", "MFC", "SQLite", "ONVIF", "RTSP", "OpenSSL"]
+    },
+    {
+      "id": 4,
+      "name": "위성 지상국 운용 소프트웨어",
+      "description": "위성 Telemetry 수신, 스크립트 및 수동 Telecommand 송신 기능을 제공하는 소프트웨어.",
+      "isTeam": true,
+      "stack": ["C#", "WPF"]
     }
   ],
 

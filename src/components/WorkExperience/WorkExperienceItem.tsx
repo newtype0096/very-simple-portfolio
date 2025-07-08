@@ -36,7 +36,7 @@ const WorkExperienceItem = ({
           </div>
         </div>
       </div>
-      <div className="md:border-GRAY_LIGHT md:border-solid md:border-l-[1px] md:pl-4 md:ml-4 markdown w-full">
+      <div className="md:border-GRAY_LIGHT md:border-solid md:border-l-[1px] md:pl-4 md:ml-6 markdown w-full">
         <div>
           <h4>{team}</h4>
           <blockquote className="whitespace-pre-wrap">{`${description}`}</blockquote>

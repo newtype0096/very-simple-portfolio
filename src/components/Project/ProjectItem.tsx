@@ -32,24 +32,24 @@ const ProjectItem = ({
           <div className="flex flex-col gap-2">
             <div className="w-48">
               <h3>{name}</h3>
-              <div className="flex flex-col">
+              {/* <div className="flex flex-col">
                 <span>{`${period[0]} - ${period[1]}`}</span>
-              </div>
+              </div> */}
             </div>
-            <Links repoUrl={repoUrl} webUrl={webUrl} />
+            {/* <Links repoUrl={repoUrl} webUrl={webUrl} /> */}
           </div>
         </div>
       </div>
-      <div className="md:border-GRAY_LIGHT md:border-solid md:border-l-[1px] md:pl-4 markdown flex flex-col w-full gap-2">
+      <div className="md:border-GRAY_LIGHT md:border-solid md:border-l-[1px] md:pl-4 md:ml-6 markdown flex flex-col w-full gap-2">
         <div>
           <blockquote className="whitespace-pre-wrap">{`${description}`}</blockquote>
           <div className="flex gap-1 flex-wrap">
             {stack.map((stack) => (
               <span
                 key={stack}
-                className=" bg-BLACK dark:bg-white  py-[2px] px-1.5 rounded-md text-xs font-medium font-mono whitespace-nowrap text-white dark:text-BLACK"
+                className="bg-BLACK py-[2px] rounded-md text-xs font-medium font-mono whitespace-nowrap text-white dark:text-BLACK"
               >
-                {stack}
+                <code className="font-mono">{stack}</code>
               </span>
             ))}
           </div>
