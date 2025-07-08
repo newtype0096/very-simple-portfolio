@@ -49,30 +49,40 @@ const MarkdownGallery = ({ images }: MarkdownGalleryProps) => {
           onClick={closeModal}
         >
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-3xl px-2 py-1 bg-black/40 rounded hover:bg-black/70"
+            className="absolute left-6 top-1/2 -translate-y-1/2 text-white text-3xl px-3 py-2 bg-black/60 rounded-full hover:bg-black/90 hover:scale-110 transition-all duration-200 shadow-md border border-white/30"
+            style={{ zIndex: 10 }}
             onClick={prev}
             aria-label="이전 이미지"
           >
             &#8592;
           </button>
-          <div className="relative w-[80vw] max-w-2xl h-[60vw] max-h-[70vh] flex items-center justify-center">
-            <Image
-              src={images[current].src}
-              alt={images[current].alt || `gallery-modal-${current}`}
-              fill
-              style={{ objectFit: "contain" }}
-              className="rounded shadow-lg"
-            />
+          <div className="flex flex-col items-center justify-center w-[90vw] h-[90vh] max-w-6xl max-h-[90vh]">
+            <div className="relative w-full h-full flex items-center justify-center">
+              <Image
+                src={images[current].src}
+                alt={images[current].alt || `gallery-modal-${current}`}
+                fill
+                style={{ objectFit: "contain" }}
+                className="rounded shadow-lg"
+              />
+            </div>
+            {images[current].alt && images[current].alt.trim() !== '' && (
+              <div className="mt-4 text-center text-white text-base md:text-lg bg-black/50 px-4 py-2 rounded shadow-lg border border-white/60 inline-block">
+                {images[current].alt}
+              </div>
+            )}
           </div>
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-3xl px-2 py-1 bg-black/40 rounded hover:bg-black/70"
+            className="absolute right-6 top-1/2 -translate-y-1/2 text-white text-3xl px-3 py-2 bg-black/60 rounded-full hover:bg-black/90 hover:scale-110 transition-all duration-200 shadow-md border border-white/30"
+            style={{ zIndex: 10 }}
             onClick={next}
             aria-label="다음 이미지"
           >
             &#8594;
           </button>
           <button
-            className="absolute top-4 right-4 text-white text-2xl px-2 py-1 bg-black/40 rounded hover:bg-black/70"
+            className="absolute top-6 right-6 text-white text-3xl px-3 py-2 bg-black/60 rounded-full hover:bg-black/90 hover:scale-110 transition-all duration-200 shadow-md border border-white/30"
+            style={{ zIndex: 20 }}
             onClick={closeModal}
             aria-label="닫기"
           >
