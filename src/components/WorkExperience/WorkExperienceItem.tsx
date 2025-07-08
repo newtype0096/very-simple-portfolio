@@ -18,7 +18,8 @@ const WorkExperienceItem = ({
 }: WorkExperienceProps) => {
   return (
     <div className="flex flex-col md:flex-row gap-6 md:gap-0">
-      <div className="flex md:flex-col items-center md:items-start mr-4 gap-6">
+      {/* 왼쪽: 이미지+회사명 sticky */}
+      <div className="flex md:flex-col items-center md:items-start mr-4 gap-6 md:sticky md:top-24 md:self-start z-10">
         {imgSrc && (
           <Image
             src={imgSrc}
@@ -36,19 +37,20 @@ const WorkExperienceItem = ({
           </div>
         </div>
       </div>
+      {/* 오른쪽: 마크다운 일반 영역 */}
       <div className="md:border-GRAY_LIGHT md:border-solid md:border-l-[1px] md:pl-4 md:ml-6 markdown w-full">
         <div>
           <h4>{team}</h4>
           <blockquote className="whitespace-pre-wrap">{`${description}`}</blockquote>
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown ?? ""}</ReactMarkdown>
-        </div>        
+        </div>
         {team_2 && description_2 && (
           <div>
             <h4>{team_2}</h4>
             <blockquote className="whitespace-pre-wrap">{`${description_2}`}</blockquote>
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown_2 ?? ""}</ReactMarkdown>
           </div>
-        )}        
+        )}
       </div>
     </div>
   );
