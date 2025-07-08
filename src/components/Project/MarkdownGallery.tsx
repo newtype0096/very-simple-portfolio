@@ -57,19 +57,23 @@ const MarkdownGallery = ({ images }: MarkdownGalleryProps) => {
             &#8592;
           </button>
           <div className="flex flex-col items-center justify-center w-[90vw] h-[90vh] max-w-6xl max-h-[90vh]">
-            <div className="relative w-full h-full flex items-center justify-center">
-              <Image
-                src={images[current].src}
-                alt={images[current].alt || `gallery-modal-${current}`}
-                fill
-                style={{ objectFit: "contain" }}
-                className="rounded shadow-lg"
-              />
-            </div>
-            {images[current] && typeof images[current].alt === 'string' && images[current].alt.trim() !== '' && (
-              <div className="mt-4 text-center text-white text-base md:text-lg bg-black/50 px-4 py-2 rounded shadow-lg border border-white/60 inline-block">
-                {images[current].alt}
-              </div>
+            {images[current] && (
+              <>
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src={images[current].src}
+                    alt={images[current].alt || `gallery-modal-${current}`}
+                    fill
+                    style={{ objectFit: "contain" }}
+                    className="rounded shadow-lg"
+                  />
+                </div>
+                {typeof images[current].alt === 'string' && images[current].alt.trim() !== '' && (
+                  <div className="mt-4 text-center text-white text-base md:text-lg bg-black/50 px-4 py-2 rounded shadow-lg border border-white/60 inline-block">
+                    {images[current].alt}
+                  </div>
+                )}
+              </>
             )}
           </div>
           <button
