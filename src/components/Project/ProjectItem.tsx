@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import MarkdownGallery from "./MarkdownGallery";
 
 import Links from "./Links";
 
@@ -54,7 +55,25 @@ const ProjectItem = ({
             ))}
           </div>
         </div>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown ?? ""}</ReactMarkdown>
+        {/* 마크다운에서 이미지 추출 및 갤러리 렌더 */}
+        {markdown && (
+          <>
+            <MarkdownGallery
+              images={
+                Array.from(markdown.matchAll(/!\[(.*?)\]\((.*?)\)/g)).map((m) => ({
+                  alt: m[1],
+                  src: m[2],
+                }))
+              }
+            />
+            {/* 이미지 마크다운 제거 후 텍스트만 렌더 */}
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+            >
+              {markdown.replace(/!\[.*?\]\(.*?\)\s*/g, "")}
+            </ReactMarkdown>
+          </>
+        )}
       </div>
     </div>
   );
