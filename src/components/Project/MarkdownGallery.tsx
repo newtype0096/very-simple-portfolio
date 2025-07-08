@@ -66,9 +66,9 @@ const MarkdownGallery = ({ images }: MarkdownGalleryProps) => {
                 className="rounded shadow-lg"
               />
             </div>
-            {images[current]?.alt && images[current]?.alt.trim() !== '' && (
+            {images[current] && typeof images[current].alt === 'string' && images[current].alt.trim() !== '' && (
               <div className="mt-4 text-center text-white text-base md:text-lg bg-black/50 px-4 py-2 rounded shadow-lg border border-white/60 inline-block">
-                {images[current]?.alt}
+                {images[current].alt}
               </div>
             )}
           </div>
