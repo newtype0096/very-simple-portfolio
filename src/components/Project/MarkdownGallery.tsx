@@ -46,7 +46,7 @@ const MarkdownGallery = ({ images }: MarkdownGalleryProps) => {
       {open && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-          onClick={closeModal}
+          // onClick 제거: 배경 클릭 시 모달이 닫히지 않도록
         >
           <button
             className="absolute left-6 top-1/2 -translate-y-1/2 text-white text-3xl px-3 py-2 bg-black/60 rounded-full hover:bg-black/90 hover:scale-110 transition-all duration-200 shadow-md border border-white/30"

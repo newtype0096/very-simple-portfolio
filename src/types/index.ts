@@ -17,6 +17,7 @@ export interface WorkExperienceProps {
   team_2?: string;
   description_2?: string;
   markdown_2?: string;
+  gallery?: { src: string; alt?: string }[];
 }
 
 export interface ProjectProps {
