@@ -6,11 +6,11 @@ import { DataProps } from "@/types";
 const Information = ({ information }: Pick<DataProps, "information">) => {
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex items-start gap-12">
+      <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-10 md:gap-12">
         <img
           src="/images/profile.jpg"
           alt="프로필 사진"
-          className="w-48 h-48 rounded-full object-cover"
+          className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover mx-auto sm:mx-0"
         />
         <div className="flex flex-col gap-2 flex-1">
           <h2 className="leading-[1.15]">
@@ -21,7 +21,7 @@ const Information = ({ information }: Pick<DataProps, "information">) => {
             <span className="text-PRIMARY font-semibold">{information.name}</span>
             입니다.
           </h2>
-          <div className="flex gap-1">
+          <div className="flex gap-1 flex-wrap">
             {information.contact.map((contact) => (
               <ContactItem
                 key={contact.id}
