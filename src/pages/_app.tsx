@@ -9,16 +9,16 @@ import type { AppProps } from "next/app";
 const DEFAULT_SEO = {
   title: "최진우 | Application Dev",
   description: "안녕하세요, 응용소프트웨어 개발자 최진우입니다.",
-  canonical: "https://www.naver.com/",
+  canonical: "https://portfolio-tau-virid-88.vercel.app/",
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://www.naver.com/",
+    url: "https://portfolio-tau-virid-88.vercel.app/",
     title: "최진우 | Application Dev",
     site_name: "최진우 | Application Dev",
     images: [
       {
-        url: "/share.png",
+        url: "https://portfolio-tau-virid-88.vercel.app/share.png",
         width: 285,
         height: 167,
         alt: "최진우 | Application Dev",
